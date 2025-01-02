@@ -78,9 +78,9 @@ function decryptMessage($key, $encryptedMessage) {
 6. **Automatic Cleanup**  
    - A cron job deletes all JSON files every minute to ensure no data persists on the server longer than necessary.
 
-![Secure Chat Logo](img/1)
-![Secure Chat Logo](img/2)
-![Secure Chat Logo](img/3)
+![Secure Chat Logo](img/1.png)
+![Secure Chat Logo](img/2.png)
+![Secure Chat Logo](img/3.png)
 
 
 
@@ -105,7 +105,7 @@ Chat data is temporarily stored in a `chat_sessions` directory. Each session is 
     ]
 }
 ```
-![Secure Chat Logo](img/4)
+![Secure Chat Logo](img/4.png)
 
 ## Auto Cleanup (Cron Job)
 
