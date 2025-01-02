@@ -15,6 +15,7 @@ The chat history (encrypted messages) is stored in a JSON file on the server and
 - **Automatic Cleanup**: A cron job deletes all encrypted JSON files every minute, ensuring no data lingers on the server.
 - **Chat Room Deletion**: Users can manually delete chat sessions using a "Delete Chat" button.
 
+
 ## Encryption Details
 
 ### Key Generation
@@ -77,6 +78,13 @@ function decryptMessage($key, $encryptedMessage) {
 6. **Automatic Cleanup**  
    - A cron job deletes all JSON files every minute to ensure no data persists on the server longer than necessary.
 
+![Secure Chat Logo](img/1)
+![Secure Chat Logo](img/2)
+![Secure Chat Logo](img/3)
+
+
+
+
 ## Server-Side File Storage
 
 Chat data is temporarily stored in a `chat_sessions` directory. Each session is saved as a JSON file named after the session key. 
@@ -97,6 +105,7 @@ Chat data is temporarily stored in a `chat_sessions` directory. Each session is 
     ]
 }
 ```
+![Secure Chat Logo](img/4)
 
 ## Auto Cleanup (Cron Job)
 
