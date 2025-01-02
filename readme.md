@@ -54,7 +54,7 @@ function decryptMessage($key, $encryptedMessage) {
 }
 ```
 
-## End-to-End Flow
+##  Flow
 
 1. **Starting a Chat**  
    - A user generates a unique session key using the "Generate Key" button.  
