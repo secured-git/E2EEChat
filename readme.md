@@ -76,7 +76,7 @@ function decryptMessage($key, $encryptedMessage) {
    - Users can delete the chat, which removes the corresponding JSON file from the server.
 
 6. **Automatic Cleanup**  
-   - A cron job deletes all JSON files every minute to ensure no data persists on the server longer than necessary.
+   - A cron job deletes all JSON files every hour to ensure no data persists on the server longer than necessary.
 <p>
   <img src="img/1.png" alt="Secure Chat Logo 1" width="300">
 </p>
@@ -114,12 +114,12 @@ Chat data is temporarily stored in a `chat_sessions` directory. Each session is 
 
 ## Auto Cleanup (Cron Job)
 
-A cron job ensures privacy by automatically deleting all `.json` files in the `chat_sessions` directory every minute.
+A cron job ensures privacy by automatically deleting all `.json` files in the `chat_sessions` directory every hour.
 
 ### Cron Job Example
 
 ```bash
-* * * * * php /path/to/delete_json_files.php
+0 * * * * /bin/find /path/to/e2echat/chat_sessions/* -type f -exec /bin/rm -f {} +
 ```
 
 ## Client-Side (Browser)
